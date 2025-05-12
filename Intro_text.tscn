@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://y3ppmh0jvhgo"]
+
+[ext_resource type="Texture2D" uid="uid://ob2p626erdgd" path="res://City background sky.png" id="1_gb06k"]
+[ext_resource type="Script" uid="uid://c1hp5087bp0tp" path="res://texture_rect.gd" id="2_yfpuc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gb06k"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_yfpuc"]
+font_size = 50
+
+[node name="Intro Text" type="Node2D"]
+
+[node name="Intro_text_background" type="TextureRect" parent="."]
+offset_right = 1150.0
+offset_bottom = 555.0
+texture = ExtResource("1_gb06k")
+script = ExtResource("2_yfpuc")
+
+[node name="Description" type="Label" parent="Intro_text_background"]
+layout_mode = 0
+offset_right = 2852.0
+offset_bottom = 309.0
+text = "You are an ex-soldier living peacefully in a city. 
+Suddenly it's attacked and overrun by enemies. 
+Avoid them and escape"
+label_settings = SubResource("LabelSettings_gb06k")
+
+[node name="Start" type="Label" parent="Intro_text_background"]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 377.0
+offset_right = 788.0
+offset_bottom = 516.0
+text = "Press Enter to Start"
+label_settings = SubResource("LabelSettings_yfpuc")
